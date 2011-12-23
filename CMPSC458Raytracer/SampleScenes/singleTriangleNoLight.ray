@@ -1,0 +1,48 @@
+# author: Kyle
+
+Background {
+	# Color of the background 
+	color 0.15 0.15 0.25 # blue-gray
+	# low intensity white light
+	ambientLight 0.3 0.3 0.3 
+}
+
+Camera {
+	eye 0 0 0
+	lookAt 1 0 0
+	up 0 0 1
+	fovy 45
+}
+
+Materials {
+	Material {
+		textureFilename NULL
+		diffuseColor 0.5 0 0
+		specularColor 0.3 0.3 0.3
+		reflectiveColor 0.3 0.3 0.3
+		shininess 50
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+	Material {
+		textureFilename NULL
+		diffuseColor 0 0.8 0
+		specularColor 0.3 0.3 0.3
+		reflectiveColor 0.3 0.3 0.3
+		shininess 50
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+}
+
+Group {
+	Triangle {
+		vertex0 20 5 5
+		vertex1 15 0 -5
+		vertex2 20 -5 5
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 1
+	}
+}

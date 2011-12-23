@@ -1,0 +1,104 @@
+# author: Kyle
+
+Background {
+	# Color of the background 
+	color 0.05 0.05 0.05 
+	# low intensity white light
+	ambientLight 0.2 0.2 0.2 
+}
+
+Camera {
+	eye 0 5 3
+	lookAt 15 0 0
+	up 0 0 1
+	fovy 45
+}
+Lights {
+    	Light {
+		position 11 0 10
+		color 1 1 1
+	}
+    	Light {
+		position 30 0 0
+		color .3 .3 .3
+	}
+}
+
+Materials {
+	Material {
+		textureFilename NULL
+		diffuseColor 0.5 0 0
+		specularColor 0.3 0.3 0.3
+		reflectiveColor 0.3 0.3 0.3
+		shininess 50
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+	Material {
+		textureFilename NULL
+		diffuseColor 0.5 0.5 0.5
+		specularColor 0.3 0.3 0.3
+		reflectiveColor 0.5 0.5 0.5
+		shininess 50
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+	Material {
+		textureFilename NULL
+		diffuseColor 0 0 0.5
+		specularColor 0.8 0.8 0.8
+		reflectiveColor 0.3 0.3 0.3
+		shininess 50
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+}
+
+Group {
+	Sphere {
+		materialIndex 1
+		center 15 3 3
+		radius 2
+	}
+	Sphere {
+		materialIndex 1
+		center 15 -3 3
+		radius 2
+	}
+	Triangle {
+		vertex0 10 0 -2
+		vertex1 15 0 2
+		vertex2 15 4 -6
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 2
+	}
+	Triangle {
+		vertex0 10 0 -2
+		vertex1 15 4 -6
+		vertex2 15 -4 -6
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 2
+	}
+	Triangle {
+		vertex0 10 0 -2
+		vertex1 15 -4 -6
+		vertex2 15 0 2
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 2
+	}
+	Triangle {
+		vertex0 15 0 2
+		vertex1 15 -4 -6
+		vertex2 15 4 -6
+		tex_xy_0 1 0
+		tex_xy_1 0 0
+		tex_xy_2 0 1
+		materialIndex 2
+	}
+}

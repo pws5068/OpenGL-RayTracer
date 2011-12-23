@@ -1,0 +1,54 @@
+# author: Kyle
+
+Background {
+	# Color of the background 
+	color 0.1 0.1 0.1
+	# low intensity white light
+	ambientLight 1 1 1 
+}
+
+Camera {
+	eye 15 0 0
+	lookAt 0 0 0
+	up 0 1 0
+	fovy 45
+}
+Lights {
+    	Light {
+		position 0 10 10
+		color 0.8 0.8 0.8
+	}
+}
+
+Materials {
+	Material {
+		textureFilename waterlilies.jpg
+		diffuseColor 0.5 0.5 0.5
+		specularColor 0.5 0.5 0.5
+		reflectiveColor 0 0 0
+		shininess 50
+		transparentColor 0 0 0 
+		indexOfRefraction 0.6
+	}
+}
+
+Group {
+	Triangle {
+		vertex0 0 -5 -5
+		vertex1 0 5 -5
+		vertex2 0 -5 5
+		tex_xy_0 1 1
+		tex_xy_1 1 0
+		tex_xy_2 0 1
+		materialIndex 0
+	}
+	Triangle {
+		vertex0 0 5 5
+		vertex1 0 -5 5
+		vertex2 0 5 -5
+		tex_xy_0 0 0
+		tex_xy_1 0 1
+		tex_xy_2 1 0
+		materialIndex 0
+	}
+}
